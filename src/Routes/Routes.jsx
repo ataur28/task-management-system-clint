@@ -33,7 +33,7 @@ const router = createBrowserRouter([
             {
                 path: '/subTasks/:subTasksId',
                 element: <PrivateRoute><TaskDetails></TaskDetails></PrivateRoute>,
-                loader: ({ params }) => fetch('http://localhost:5000/tasks')
+                loader: ({ params }) => fetch('https://task-management-system-server-ten.vercel.app/tasks')
             },
             {
                 path: '/login',
@@ -50,7 +50,7 @@ const router = createBrowserRouter([
             {
                 path: '/myTask',
                 element: <PrivateRoute><MyTasks></MyTasks></PrivateRoute>,
-                // loader: ({ params }) => fetch('http://localhost:5000/tasks')
+                // loader: ({ params }) => fetch('https://task-management-system-server-ten.vercel.app/tasks')
             },
             {
                 path: '/allMyTasks',
@@ -59,7 +59,7 @@ const router = createBrowserRouter([
             {
                 path: '/updateTaskData/:id',
                 element: <UpdateTaskData></UpdateTaskData>,
-                loader: ({ params }) => fetch(`http://localhost:5000/tasksDetails/${params.id}`)
+                loader: ({ params }) => fetch(`https://task-management-system-server-ten.vercel.app/tasksDetails/${params.id}`)
             },
             {
                 path: '/complete',

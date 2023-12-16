@@ -22,7 +22,7 @@ const AddTask = () => {
         const task = {title,  instructorEmail, category, date, rating, details, picture}
         console.log(task);
 
-        fetch('http://localhost:5000/tasks',{
+        fetch('https://task-management-system-server-ten.vercel.app/tasks',{
             method: 'POST',
             headers: {
                 'content-type' : 'application/json'

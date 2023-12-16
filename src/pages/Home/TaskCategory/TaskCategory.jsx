@@ -9,7 +9,7 @@ const TaskCategory = () => {
 
 
     useEffect(() => {
-        fetch('http://localhost:5000/tasks')
+        fetch('https://task-management-system-server-ten.vercel.app/tasks')
             .then(res => res.json())
             .then(data => setTasks(data))
     }, [])

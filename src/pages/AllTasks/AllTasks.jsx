@@ -8,7 +8,7 @@ const AllTasks = () => {
     const [searchTerm, setSearchTerm] = useState('');
 
     useEffect(() => {
-        fetch('http://localhost:5000/tasks?email=${user?.email}',{
+        fetch('https://task-management-system-server-ten.vercel.app/tasks?email=${user?.email}',{
             method: 'GET',
             headers: {
                 authorization: `Bearer ${localStorage.getItem('task-access-token')}`

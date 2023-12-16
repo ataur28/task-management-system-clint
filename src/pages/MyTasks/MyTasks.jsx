@@ -15,7 +15,7 @@ const MyTasks = () => {
     // const {instructorEmail} = tasks;
 
     useEffect(() => {
-        fetch('http://localhost:5000/tasks')
+        fetch('https://task-management-system-server-ten.vercel.app/tasks')
             .then(res => res.json())
             .then(data => setTasks(data))
     }, [])
@@ -30,7 +30,7 @@ const MyTasks = () => {
         // console.log(id);
         const proceed = confirm('Are You sure you want to delete');
         if (proceed) {
-            fetch(`http://localhost:5000/tasks/${id}`,{
+            fetch(`https://task-management-system-server-ten.vercel.app/tasks/${id}`,{
                 method: 'DELETE'
             })
                 .then(res => res.json())

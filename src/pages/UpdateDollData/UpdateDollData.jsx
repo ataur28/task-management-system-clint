@@ -21,7 +21,7 @@ const UpdateTaskData = () => {
         const task = { title,  date,  rating, details, picture }
         console.log(task);
 
-        fetch(`http://localhost:5000/tasksDetails/${loadedTask._id}`, {
+        fetch(`https://task-management-system-server-ten.vercel.app/tasksDetails/${loadedTask._id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
